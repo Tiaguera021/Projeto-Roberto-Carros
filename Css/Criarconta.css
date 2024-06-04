@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root{
+    --color-white: #fff;
+    --color-dark:  #000000;
+    --color-brown-soft:#735F4D;
+    --color-brown:#695746;
+    --color-yelloh-soft: #F1CE51;
+    --color-whitish-yellow:#EEE6C8;
+}
+
+/*esse estilo sera aplicado em todo HTML */
+*{
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+}
+
+
+body{
+    background-color: var(--color-whitish-yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.sec{
+    background-color: #fff;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 800px;
+    height: 55  0px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+#xcircle{
+    color: var(--color-dark);
+
+}
+
+.exit a{
+    position: absolute;
+    top: 5px; left: 5px;
+    text-decoration: none;
+}
+
+
+#create{
+    margin-top: 20px;
+    margin-left: 26px;
+    border-style: solid;
+    background-color:  var(--color-yelloh-soft);
+    height: 60px;
+    border-color: var(--color-white);       
+    border-radius: 20px;
+    color: var(--color-white);
+    font-size: 26px;
+    font-family: "Lalezar";
+    width: 180px;
+
+
+}
+
+form{
+   display: flex;
+   padding: 50px  123px 20px 130px; 
+   flex-direction: column;
+   gap: 8px;
+}
+
+form h1 {
+    color: var(--color-yelloh-soft);
+    font-family: "Lalezar";
+    text-align: center;
+    font-size: 40px;
+
+}
+
+form input{
+    border-radius: 18px;
+    border-color: var(--color-brown);
+    height: 55px;
+    font-size: 18px;
+    padding-left: 15px;
+    font-family: "Lalezar"; 
+    
+}   
+
+#form input{
+    max-width: 60%;
+    margin: auto;  
+}
+
+
+.form-container-logar {
+    background-color: #fff;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 800px;
+    height: 55  0px;
+    max-width: 100%;
+    min-height: 480px;  
+
+}
+
+#sidebar{
+    display: flex;
+    border-radius: 0px 10px 10px 0px;
+    background:var(--color-yelloh-soft); 
+    height: 500px;
+    width: 250px;
+
+}
+
+
+.horizontalbar{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-yelloh-soft);
+    height: 250px;
+}
+
+.horizontalbar a{ 
+    position: absolute;
+    top: 500px; left: 700px;
+    text-decoration: none;
+    font-family: "Lalezar";
+    color: #000000;
+
+
+}
+
+
+
+
+#enter{
+    border-radius: 18px;
+    border-style: solid;
+    border-color: var(--color-white);
+    background-color:  var(--color-yelloh-soft);
+    height: 60px;
+    width: 200px;
+    font-size: 26px;
+    font-family: "Lalezar";
+    color: var(--color-white);
+    margin: auto;
+    
+}
+
+.password{
+    padding-right: 65px; 
+    text-align: center; 
+    text-decoration: none; 
+    color:black;
+    font-family: "Lalezar";
+
+}
+

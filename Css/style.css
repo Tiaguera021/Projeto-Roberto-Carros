@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --color-white: #fff;
+    --color-dark:  #000000;
+    --color-brown-soft:#735F4D;
+    --color-brown:#504940;
+    --color-yelloh-soft: #F1CE51;
+    --color-whitish-yellow:#EEE6C8;
+}
+
+/*esse estilo sera aplicado em todo HTML */
+*{
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1   px;
+}
+
+body {
+     font-family: Arial, Helvetica, sans-serif;  
+     background-color: var(--color-whitish-yellow);
+     height: 100vh;
+     width: 100vw;
+     color: var(--color-dark);
+    }
+
+ header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10%;
+        background-color: var(--color-yelloh-soft);
+        height: 35px;
+    }
+
+#border{
+    background-color: var(--color-brown-soft);
+    height: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+
+.logo{
+    cursor:pointer; 
+}
+
+.links a {
+    list-style: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Lalezar";
+    color: var(--color-dark);
+}
+
+.links li{
+    display: inline-block;
+    padding: 0px 100px;
+}
+
+#titulo{
+    color: var(--color-brown-soft);
+    font-size: 48px;
+    margin-bottom: 36px;
+    margin-top: 110px;
+}
+
+main{
+    text-align: center;
+    padding-top: 5em;
+    height: 100vh;
+}
+
+
+.carro img {
+    display: flex;
+    justify-content: center;
+        width: 100%;
+        height:  600px;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+
+}
+
+.item img {
+    display: flex;
+    justify-content: center;
+    background-color:var(--color-white);
+    width: 410px;
+    height: 350px;
+    border-radius: 20px;
+
+}
+
+.item h1 {
+    font-size: 25px;
+    padding-right: 0px;
+    color: var(--color-brown);
+    
+}
+
+.Recomendados{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+button{
+    height: 40px;
+    width: 100px;
+    padding: 9px 25px;
+    background-color: var(--color-white);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    
+}
+
+
+#teste{
+    background-color: var(--color-yelloh-soft);
+    height: 80px;
+    text-align: left;
+    font-size: 16px;
+}
+
+
+
+#logo{
+    width: 150px;
+    padding-bottom: 26px;
+
+}
+.logo{
+    padding-top: 35px;
+    padding-left: 150px;
+    width: 100px;
+}
+
+#developed{
+    font-size: 30px;
+    color: var(--color-white);
+    text-align: center;
+}
+.footer{
+    font-size: 16px;
+    padding-top: 25px;
+    padding-left: 148px;
+    font-size: 10px;
+    color: var(--color-white);
+}
+
+
+footer{
+    background-color: var(--color-brown-soft);
+    color:var(--color-yellow-orange);   
+    font-size: 50px;
+    bottom:0%;
+    width: 100%;
+    height: 270px;
+}
+
