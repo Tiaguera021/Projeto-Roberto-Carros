@@ -33,12 +33,12 @@ class Dispatch extends ClassRoutes
 
         if(isset($this->parseurl()[1]))
         {
-            self::AddMehod();
+            self::AddMethod();
         }
     }
 
     /*Método para adição de método do Controller*/
-    private function AddMehod()
+    private function AddMethod()
     {
         if (method_exists($this->Obj, $this->parseurl()[1]))
         {

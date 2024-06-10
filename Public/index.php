@@ -1,6 +1,9 @@
 <?php
 /*Arquivo que vai conter o arquvio despachante e o composer*/
 
+session_start();
+
+header("Access-Control-Allow-Origin: robertocarros.local");
 header("Content-Type: text/html; charset:utf-8");
 
 require_once("../Config/config.php");

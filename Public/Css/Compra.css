@@ -1,0 +1,309 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --color-white: #fff;
+    --color-dark: #000000;
+    --color-brown-soft: #735F4D;
+    --color-brown: #695746;
+    --color-yelloh-soft: #F1CE51;
+    --color-yelloh-soft2:#bda241;
+    --color-whitish-yellow: #EEE6C8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+}
+
+body {
+    background-color: var(--color-whitish-yellow);
+    height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: var(--color-brown);
+    height: 35px;
+}
+
+.links a {
+    list-style: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Lalezar";
+    color: var(--color-white);
+}
+
+.links li {
+    display: inline-block;
+    padding: 0 100px;
+}
+
+.button {
+    height: 40px;
+    width: 100px;
+    padding: 9px 25px;
+    background-color: var(--color-white);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    padding-top: 10px;
+    font-family: "Lalezar";
+}
+
+/* Estilos da barra lateral */
+.sidebar {
+    width: 250px;
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: 10px;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: var(--color-dark);
+    font-family: "Lalezar";
+}
+
+.filter {
+    margin-bottom: 20px;
+}
+
+.filter label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color-dark);
+}
+
+.filter input,
+.filter select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--color-dark);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.filter button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-yelloh-soft);
+    color: var(--color-dark);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Lalezar";
+}
+
+.filter button:hover {
+    background-color: var(--color-brown-soft);
+    color: var(--color-white);
+}
+
+.teste {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.pesquisa {
+    width: 300px;
+    padding: 10px 15px;
+    border: 1px solid var(--color-dark);
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.pesquisa-btn {
+    padding: 10px 15px;
+    border: 1px solid var(--color-dark);
+    background-color: var(--color-yelloh-soft);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--color-dark);
+}
+
+.pesquisa-btn:hover {
+    background-color: var(--color-yelloh-soft2);
+    color: var(--color-white);
+}
+.card {
+    margin-bottom: 2px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: var(--color-white);
+}
+
+
+.card img {
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 260px;
+    height: 165px;
+    border: solid var(--color-dark);
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+#title {
+    font-family: "Lalezar";
+    color: var(--color-dark);
+    font-size: 20px;
+    margin-right: 200px;
+}
+
+.itens {
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    justify-content: left;
+    padding-left: 5px;
+    gap: 20px;
+}
+
+.buy-button span{
+    padding-top: 15px;
+    font-size: 25px;
+    font-family: "Lalezar";
+}
+
+.buy-button {
+    text-align: center;
+    border-left: #e0dcdc solid;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+
+
+.buy-button button {
+    font-family: "Lalezar";
+    border-radius: 9px;
+    background-color: var(--color-yelloh-soft);
+    color: var(--color-dark);
+    font-size: 30px;
+    padding: 5px;
+}
+
+.buy-button button:hover {
+    background-color: var( --color-yelloh-soft2);
+    color: var(--color-dark);
+}
+
+footer {
+    background-color: #F1CE51;
+    width: 100vw;
+}
+
+
+
+/* Tablets em Paisagem e Maiores */
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 200px;
+    }
+    .card img {
+        width: 200px;
+        height: 130px;
+    }
+    .links li {
+        padding: 0 50px;
+    }
+    .button {
+        width: 80px;
+        height: 30px;
+        font-size: 12px;
+    }
+}
+
+/* Tablets em Retrato e Maiores */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 180px;
+    }
+    .card img {
+        width: 180px;
+        height: 120px;
+    }
+    .links li {
+        padding: 0 40px;
+    }
+    .button {
+        width: 70px;
+        height: 28px;
+        font-size: 12px;
+    }
+}
+
+/* Smartphones e Maiores */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+    .links {
+        margin-top: 10px;
+    }
+    .links li {
+        padding: 0 20px;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+    .button {
+        width: 60px;
+        height: 26px;
+        font-size: 12px;
+    }
+}
+
+/* Smartphones Pequenos */
+@media (max-width: 576px) {
+    .links li {
+        padding: 0 10px;
+    }
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+    .button {
+        width: 50px;
+        height: 24px;
+        font-size: 10px;
+    }
+}

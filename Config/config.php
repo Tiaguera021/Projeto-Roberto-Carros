@@ -17,12 +17,12 @@ if (substr($_SERVER['DOCUMENT_ROOT'], -1)== '/')
 }
 
 /*Diretórios específicos*/
-define('DIRIMAGEM', "{$_SERVER['DOCUMENT_ROOT']}/{$pasta_interna}public/imagem/");
-define('DIRCSS', "{$_SERVER['DOCUMENT_ROOT']}/{$pasta_interna}public/Css/");
-define('DIRJS', "{$_SERVER['DOCUMENT_ROOT']}/{$pasta_interna}public/Js/");
+define('DIRIMAGEM', DIRPAGE."Public/Imagem/");
+define('DIRCSS', DIRPAGE."Public/Css/");
+define('DIRJS', DIRPAGE."Public/Js/");
 
 /*Acesso ao BD*/
 define('HOST',"localhost");
-define('DB',"roberto-carros");
+define('DB',"roberto_carros");
 define('USER',"root");
 define('PASS',"admin");
