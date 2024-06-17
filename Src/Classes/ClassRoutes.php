@@ -3,6 +3,7 @@ namespace Src\Classes;
 
 use Src\traits\TraitUrlParser;
 
+#Arquivo para configurar as URLs
 class ClassRoutes
 {
 
@@ -16,13 +17,15 @@ class ClassRoutes
         $Url = $this->parseurl();
         $i = $Url[0];
 
+        #array que inclui as URLs e atribui cada uma a uma Controller
         $this->rotas=array(
             ""=>"ControllerHome",
             "home"=>"ControllerHome",
             "login"=>"ControllerLogin",
             "cadastrar"=>"ControllerCadastrar",
             "cadastrar-veiculo"=>"ControllerCadastrarVeiculo",
-            "comprar-veiculo"=>"ControllerComprarVeiculo"
+            "comprar-veiculo"=>"ControllerComprarVeiculo",
+            "sobre-nos"=>"ControllerSobreNos"
         );
 
         if (array_key_exists($i, $this->rotas))

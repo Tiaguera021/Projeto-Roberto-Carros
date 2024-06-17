@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+<?php ob_start(); ?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,117 +9,89 @@
     <title><?php echo $this->getTitle(); ?></title>
     <link rel="stylesheet" href="<?php echo DIRCSS."Compra.css"; ?>">
 </head>
+
 <body>
 <header>
-    <img class="logo" id="logo" src="<?php echo DIRIMAGEM. "logo.png" ;?>" alt="logo">
+    <img class="" id="logo2" src="<?php echo DIRIMAGEM."logo.png";?>" alt="logo">
     <nav>
         <ul class="links">
-            <li><a href="home">Home</a></li>
-            <li><a href="comprar-veiculo">Compra</a></li>
-            <li><a href="Ajuda.html">Ajuda</a></li>
+            <li><a href="<?php echo DIRPAGE.'home'?>">Home</a></li>
+            <li><a href="<?php echo DIRPAGE.'comprar-veiculo'?>">Compra</a></li>
+            <li><a href="<?php echo DIRPAGE.'sobre-nos'?>">Ajuda</a></li>
         </ul>
     </nav>
     <div class="B">
-        <a href="login"><button class="button">Entrar</button></a>
+        <?php if(!isset($_SESSION['usuario'])) { ?>
+            <a class="button" href = "<?php echo DIRPAGE.'login'; ?>" >Logar</a>
+        <?php } else{ ?>
+            <a class="button" href = "<?php echo DIRPAGE.'login/logout'; ?>" >Sair</a>
+        <?php } ?>
     </div>
 </header>
+<form name="FormSelect" id="FormSelect" action="<?php echo DIRPAGE.'comprar-veiculo/mostrarVeiculos';?>" method="post">
+    <div class="teste">
+        <input class="pesquisa" type="text" name="modelo" placeholder="Pesquisar por modelo">
+        <button class="pesquisa-btn" type="submit" value="Pesquisar">🔍</button>
+    </div>
+</form>
 
-<div class="teste">
-    <input class="pesquisa" type="text" placeholder="Pesquisar">
-    <button class="pesquisa-btn">🔍</button>
-</div>
 
 <div class="container">
     <div class="sidebar">
         <h2 style="text-align: center;">Filtros</h2>
-        <form id="car-filters">
+        <form id="car-filters" action="<?php echo DIRPAGE.'comprar-veiculo/mostrarVeiculos';?>" method="post">
             <div class="filter">
                 <label for="marca">Marca:</label>
-                <select id="marca" name="marca">
-                    <option value="">Selecione</option>
-                    <option value="ford">Ford</option>
-                    <option value="chevrolet">Chevrolet</option>
-                    <option value="toyota">Toyota</option>
-                </select>
+                <input type="text" name="marca" placeholder="Digite a marca" value="<?= isset($_POST['marca']) ? $_POST['marca'] : '' ?>">
             </div>
 
             <div class="filter">
                 <label for="modelo">Modelo:</label>
-                <input type="text" id="modelo" name="modelo" placeholder="Digite o modelo">
+                <input type="text" id="modelo" name="modelo" placeholder="Digite o modelo" value="<?= isset($_POST['modelo']) ? $_POST['modelo'] : '' ?>">
             </div>
 
             <div class="filter">
                 <label for="ano">Ano:</label>
-                <input type="number" id="ano" name="ano" placeholder="Digite o ano">
+                <input type="number" id="ano" name="ano" placeholder="Digite o ano" value="<?= isset($_POST['ano']) ? $_POST['ano'] : '' ?>">
             </div>
 
             <div class="filter">
                 <label for="versao">Versão:</label>
-                <input type="text" id="versao" name="versao" placeholder="Digite a versão">
+                <input type="text" id="versao" name="versao" placeholder="Digite a versão" value="<?= isset($_POST['versao']) ? $_POST['versao'] : '' ?>">
             </div>
 
             <div class="filter">
                 <label for="blindado">Blindado:</label>
                 <select id="blindado" name="blindado">
                     <option value="">Selecione</option>
-                    <option value="sim">Sim</option>
-                    <option value="nao">Não</option>
+                    <option value="sim" <?= isset($_POST['blindado']) && $_POST['blindado'] == 'sim' ? 'selected' : ''?>>Sim</option>
+                    <option value="nao" <?= isset($_POST['blindado']) && $_POST['blindado'] == 'nao' ? 'selected' : ''?>>Não</option>
                 </select>
             </div>
 
             <div class="filter">
                 <label for="quilometragem">Quilometragem:</label>
-                <input type="number" id="quilometragem" name="quilometragem" placeholder="Digite a quilometragem">
+                <input type="number" id="quilometragem" name="quilometragem" placeholder="Digite a quilometragem" value="<?= isset($_POST['quilometragem']) ? $_POST['quilometragem'] : '' ?>">
             </div>
 
             <div class="filter">
                 <label for="preco">Preço:</label>
-                <input type="number" id="preco" name="preco" placeholder="Digite o preço">
+                <input type="number" id="preco" name="preco" placeholder="Digite o preço" value="<?= isset($_POST['preco']) ? $_POST['preco'] : '' ?>">
             </div>
 
             <div class="filter">
-                <button type="submit">Aplicar Filtros</button>
+                <button type="submit" value="mostrarVeiculos">Aplicar Filtros</button>
             </div>
         </form>
     </div>
 
     <div class="itens">
-        <div class="card">
-            <img src="<?php echo DIRIMAGEM."img.png"; ?>" alt="">
-            <h1 id="title">Nome do carro</h1>
-            <div class="buy-button">
-                <span>Valor do carro</span>
-                <button>Comprar</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="<?php echo DIRIMAGEM."img.png"; ?>" alt="">
-            <h1 id="title">Nome do carro</h1>
-            <div class="buy-button">
-                <span>Valor do carro</span>
-                <button>Comprar</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="<?php echo DIRIMAGEM."img.png"; ?>" alt="">
-            <h1 id="title">Nome do carro</h1>
-            <div class="buy-button">
-                <span>Valor do carro</span>
-                <button>Comprar</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="<?php echo DIRIMAGEM."img.png"; ?>" alt="">
-            <h1 id="title">Nome do carro</h1>
-            <div class="buy-button">
-                <span>Valor do carro</span>
-                <button>Comprar</button>
-            </div>
-        </div>
+        <?php
+        $controller = new \App\Controller\ControllerComprarVeiculo();
+        $controller->mostrarVeiculos();
+        ?>
     </div>
+
 </div>
 </body>
 </html>

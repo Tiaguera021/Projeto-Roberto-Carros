@@ -4,6 +4,8 @@ namespace App\Model;
 
 use App\Model\ClassConexao;
 use App\Model\ClassVerificaEmail;
+
+#Trata sobre as partes de cadastro de usuários no banco de dados
 class ClassCadastrar extends ClassConexao
 {
     private $Db;

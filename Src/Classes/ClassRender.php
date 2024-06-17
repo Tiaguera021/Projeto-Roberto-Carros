@@ -69,6 +69,15 @@ class ClassRender
         include_once(DIRREQ. "App/View/ComprarVeiculo/ComprarVeiculo.php");
     }
 
+    public function RenderCadVeiculo()
+    {
+        include_once(DIRREQ. "App/View/CadastrarVeiculo/CadastrarVeiculo.php");
+    }
+
+    public function RenderSobreNos()
+    {
+        include_once(DIRREQ. "App/View/SobreNos/SobreNos.php");
+    }
 
     public function AddMain()
     {

@@ -24,6 +24,7 @@ class ControllerCadastrar extends ClassCadastrar
         $Render->RenderCadastrar();
     }
 
+    #Verifica se há campos em branco na tela de cadastro
     public function emptyFieldCheck()
     {
         if ( empty($this->Email) OR empty($this->Senha) OR empty($this->Nome) OR empty($this->Telefone) OR empty($this->Idade) ) {
