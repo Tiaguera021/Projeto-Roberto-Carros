@@ -12,7 +12,7 @@
 
 <body>
 <header>
-    <img class="" id="logo2" src="<?php echo DIRIMAGEM."logo.png";?>" alt="logo">
+    <img class="logo" id="logo2" src="<?php echo DIRIMAGEM."logo.png";?>" alt="logo">
     <nav>
         <ul class="links">
             <li><a href="<?php echo DIRPAGE.'home'?>">Home</a></li>

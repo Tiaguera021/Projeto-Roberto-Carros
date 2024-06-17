@@ -1,0 +1,342 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --color-white: #fff;
+    --color-dark: #000000;
+    --color-brown-soft: #614e3d;
+    --color-brown: #504940;
+    --color-yelloh-soft: #dbbc4b;
+    --color-yelloh-dark: #bba146;
+    --color-whitish-yellow: #cac2a4;
+    --color-whitish-yellow2: #9e977f;
+
+
+}
+
+/*esse estilo sera aplicado em todo HTML */
+* {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1 px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-whitish-yellow);
+    height: 100vh;
+    width: 100vw;
+    color: var(--color-dark);
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    background-color: var(--color-yelloh-soft);
+    height: 35px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15 0px;
+    height: 100vh;
+}
+
+#main-container h1 {
+    margin-bottom: 30px;
+
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+
+#title {
+    background-color: var(--color-brown-soft);
+    padding: 40px;
+    font-family: "Vollkorn";
+    text-align: center;
+    color: var(--color-white);
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+
+
+#container-about-Us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 390px;
+    margin-right: 390px;
+    margin-bottom: 20 0px;
+    font-family: "Vollkorn";
+
+
+}
+
+
+#container-about-Us h1 {
+    margin-bottom: 10px;
+
+}
+
+
+p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+
+
+
+.logo {
+    padding-top: 35px;
+    padding-left: 150px;
+    width: 100px;
+    cursor: pointer;
+    padding-bottom: 30px;
+}
+
+
+
+.links a {
+    list-style: none;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Lalezar";
+    color: var(--color-dark);
+}
+
+.links li {
+    display: inline-block;
+    padding: 0px 100px;
+}
+
+
+
+
+button {
+    height: 40px;
+    width: 100px;
+    padding: 9px 25px;
+    background-color: var(--color-white);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+
+#container-contacts {
+    font-family: "Lalezar";
+    padding-top: 30px;
+    width: 500px;
+    background-color: var(--color-whitish-yellow2);
+    border-radius: 10px;
+
+}
+
+#container-contacts a {
+    width: 400px;
+
+    text-decoration: none;
+    color: var(--color-yelloh-soft);
+
+}
+
+
+#container-socialmidia {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100vw;
+    height: 200px;
+    padding: 50px 0px 50px 0px;
+
+    background-color: var(--color-whitish-yellow2);
+
+}
+
+#container-socialmidia h1 {
+
+    font-family: "Vollkorn";
+    color: var(--color-dark);
+
+}
+
+
+#number {
+    padding-bottom: 20px;
+}
+
+.container-socialmidia-icons {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 50px;
+
+}
+
+.container-socialmidia-icons a {
+    color: var(--color-yelloh-dark);
+    font-size: 55px;
+    height: 10px;
+}
+
+.container-socialmidia-icons :hover {
+    color: var(--color-yelloh-soft);
+
+}
+
+
+.logo {
+    padding-top: 35px;
+    padding-left: 150px;
+    width: 100px;
+    cursor: pointer;
+    padding-bottom: 30px;
+}
+
+#developed {
+    font-family: "jetbrains moni";
+    padding-right: 40px;
+    font-size: 15px;
+    color: var(--color-white);
+    padding-top: 30px;
+    text-align:center;
+
+}
+
+#developed a {
+    text-decoration: none;
+    color: var(--color-yelloh-soft);
+
+}
+
+
+#footer-horizontal-bar{
+
+    background-color: var(--color-yelloh-soft);
+    height: 80px;
+    text-align: left;
+}
+
+
+footer {
+    background-color: var(--color-brown-soft);
+    color: var(--color-yellow-orange);
+    font-size: 50px;
+    width: 100vw;
+    height: 200px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        background-color: var(--color-yelloh-soft);
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    .logo {
+        padding: 10px 0;
+        width: 80px; /* Reduzindo o tamanho da logo */
+    }
+
+    nav {
+        width: 100%; /* Garantir que a navegação ocupe toda a largura */
+        margin: 10px 0; /* Espaçamento entre logo e links de navegação */
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .links li {
+        width: 100%; /* Garantir que os links ocupem toda a largura */
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .B {
+        margin-top: 10px; /* Espaçamento entre links de navegação e botão de login */
+    }
+
+    #title {
+        font-size: 32px;
+        padding: 20px;
+    }
+
+    #container-about-Us,
+    #container-testimonials,
+    #container-team,
+    #container-timeline,
+    #container-cta,
+    #container-contacts {
+        padding: 20px;
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+
+    #container-about-Us h1,
+    #container-testimonials h2,
+    #container-team h2,
+    #container-timeline h2,
+    #container-cta h2 {
+        font-size: 24px;
+    }
+
+    #container-about-Us p,
+    #container-contacts p {
+        font-size: 16px;
+    }
+
+    .team-member {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .team-member img,
+    #car-images img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #container-socialmidia {
+        padding: 20px;
+    }
+
+    .container-socialmidia-icons {
+        gap: 20px;
+    }
+
+    .container-socialmidia-icons a {
+        font-size: 40px;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    #developed {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

@@ -76,7 +76,6 @@
         <h1>Telefone</h1>
         <p>(41) 3321-0200</p>
     </div>
-    <div id="developed"><u>Desenvolvido por V,M,T</u></div>
 </footer>
 </body>
 </html>
