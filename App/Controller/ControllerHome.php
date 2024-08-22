@@ -5,14 +5,10 @@ namespace App\Controller;
 use Src\Classes\ClassRender;
 use Src\Interfaces\InterfaceView;
 
-class ControllerHome extends ClassRender implements InterfaceView
+class ControllerHome extends Controller
 {
-    public function __construct()
+    public function index()
     {
-        $this->setTitle("Home");
-        $this->setDescription("Esta é a home do nosso site");
-        $this->setKeywords("MVC, home, carros clássicos");
-        $this->setDir("home/");
-        $this->RenderLayout();
+        $this->render('Home/Home');
     }
 }

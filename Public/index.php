@@ -9,8 +9,4 @@ error_reporting(E_ALL); ini_set("display_errors", 1);
 require_once("../Config/config.php");
 require_once("../Src/Vendor/autoload.php");
 
-use Src\Traits\TraitUrlParser;
-use Src\Classes\ClassRoutes;
-use App\Dispatch;
-
-$Dispatch= new App\Dispatch();
+$router = require '../Src/Routes/index.php';

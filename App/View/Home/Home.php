@@ -3,27 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="<?php echo $this->getDescription(); ?>">
-    <meta name="Keywords" content="<?php echo $this->getKeywords(); ?>">
-    <title><?php echo $this->getTitle(); ?></title>
+    <title>Home</title>
     <link rel="stylesheet" href="<?php echo DIRCSS."Style.css"; ?>"/>
    <!-- <link rel="stylesheet" href="<<!?php echo DIRCSS."bootstrap.min.css"; ?>">
 
    <script src="<<!-?php echo DIRJS."bootstrap.bundle.min.js"; ?>" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
     <!-- script src="script.js"></script -->
-    <?php echo $this->AddHead(); ?>
 </head>
 
 <body>
 <header>
-    <div class="Header">
-        <?php echo $this->AddHeader();?>
-    </div>
     <img class="" id="logo2" src="<?php echo DIRIMAGEM. "logoOficial.png";?>" alt="logo">
     <nav>
         <ul class="links">
-            <li><a href="home">Home</a></li>
-            <li><a href="comprar-veiculo">Compra</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="mostrar-veiculos">Compra</a></li>
             <li><a href="sobre-nos">Sobre nós</a></li>
         </ul>
     </nav>
@@ -31,10 +25,12 @@
         <?php if(!isset($_SESSION['usuario'])) { ?>
             <a class="login" href = "<?php echo DIRPAGE.'login'; ?>" ><button > Logar</button ></a >
         <?php } else{ ?>
-            <a class="login" href = "<?php echo DIRPAGE.'login/logout'; ?>" ><button > Sair</button ></a >
+            <a class="login" href = "<?php echo DIRPAGE.'logout'; ?>" ><button > Sair</button ></a >
         <?php } ?>
     <div>
 </header>
+<?php include DIRREQ. 'App/View/Components/FlashMessage.php'; ?>
+
 <div id="border"></div>
 <!--img----------------------------------------------->
 <div class="carro">
@@ -45,7 +41,7 @@
 <!---------------------------------------------------->
 <main>
     <div class="Main">
-        <?php echo $this->AddMain(); ?>
+        <?php //include DIRREQ.'App/View/Home/Footer.php'?>
     </div>
     <h1 id="titulo">Carros mais buscados</h1>
     <div class="container">

@@ -5,9 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="<?php echo $this->getDescription(); ?>">
-    <meta name="Keywords" content="<?php echo $this->getKeywords(); ?>">
-    <title><?php echo $this->getTitle(); ?></title>
+    <title>Sobre nós</title>
     <link rel="stylesheet" href="<?php echo DIRCSS.'Sobre.css'?>">
 </head>
 
@@ -17,14 +15,11 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 <header>
-    <div class="Header">
-        <?php echo $this->AddHeader();?>
-    </div>
     <img class="logo" id="logo2" src="<?php echo DIRIMAGEM. "logoOficial.png";?>" alt="logo">
     <nav>
         <ul class="links">
-            <li><a href="home">Home</a></li>
-            <li><a href="comprar-veiculo">Compra</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="mostrar-veiculos">Compra</a></li>
             <li><a href="sobre-nos">Sobre nós</a></li>
         </ul>
     </nav>
@@ -32,7 +27,7 @@
         <?php if(!isset($_SESSION['usuario'])) { ?>
             <a class="login" href = "<?php echo DIRPAGE.'login'; ?>" ><button > Logar</button ></a >
         <?php } else{ ?>
-            <a class="login" href = "<?php echo DIRPAGE.'login/logout'; ?>" ><button > Sair</button ></a >
+            <a class="login" href = "<?php echo DIRPAGE.'logout'; ?>" ><button > Sair</button ></a >
         <?php } ?>
         <div>
 </header>

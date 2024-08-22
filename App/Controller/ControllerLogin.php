@@ -2,60 +2,54 @@
 
 namespace App\Controller;
 
-use App\Model\ClassLogar;
+use App\Model\ClassLogin;
 use Src\Classes\ClassRender;
 use Src\Interfaces\InterfaceView;
-use App\Model\ClassCadastrar;
-class ControllerLogin extends ClassLogar
+use App\Model\ClassCliente;
+class ControllerLogin extends Controller
 {
-    private $Email;
-    private $Senha;
+    private $email;
+    private $senha;
+
+    private $loginModel;
     public function __construct()
     {
-        $Render=new ClassRender();
-        $Render->setTitle("Login");
-        $Render->setDescription("Está é a tela para você logar");
-        $Render->setKeywords("MVC, home, carros clássicos, login");
-        $Render->setDir("login/");
-        $Render->RenderLogin();
+        $this->loginModel = new ClassLogin();
     }
 
-    public function RecVar()
+    public function getSanitizedParameters(): void
     {
-        if(isset($_POST['email']))
-        {
-            $this->Email=filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
-        }
-        if(isset($_POST['senha']))
-        {
-            $this->Senha=filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
+        foreach ($_POST AS $key => $post) {
+            $this->$key = filter_input(INPUT_POST, $key, FILTER_SANITIZE_SPECIAL_CHARS);
         }
     }
 
-
-    public function LogarUsuario()
+    public function login(): void
     {
-        $this->RecVar();
-        $NaoTemCadastro = $this->findByEmail($this->Email);
-        if ($NaoTemCadastro == 0){
-            $_SESSION['messageBag'] = "Este e-mail não está cadastrado";
-            header('Location: '.DIRPAGE.'login' );
+        if ( $this->isUserLogged() ) {
+            $this->addMessageBag("success", "Você já está logado!");
+            header('Location: '.DIRPAGE);
             exit();
         }
-        $Usuario = $this->findUsuario($this->Email, $this->Senha);
+        if ($this->isMethod("POST")) {
+            $this->getSanitizedParameters();
 
-        if (empty($Usuario))
-        {
-            $_SESSION['messageBag'] = "E-mail ou senha incorretos!";
-            header('Location: '.DIRPAGE.'login' );
+            $usuario = $this->loginModel->findUsuarioByEmailAndSenha($this->email, $this->senha);
+
+            if (empty($usuario)) {
+                $this->addMessageBag("error", "E-mail ou senha incorretos!");
+                header('Location: '.DIRPAGE.'login' );
+                exit();
+            }
+            $this->addSession("usuario", $usuario);
+            header('Location: '.DIRPAGE);
             exit();
         }
-        $_SESSION['usuario'] = $Usuario;
-        header('Location: '.DIRPAGE. 'home');
+        $this->render("Login/Login");
     }
-    public function logout()
+    public function logout(): void
     {
-        unset($_SESSION['usuario']);
+        $this->removeSession('usuario');
         header('Location: '.DIRPAGE. 'login');
         exit();
     }
